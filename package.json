@@ -5,9 +5,10 @@
   "main": "testingnode.js",
   "scripts": {
     "prestart": "babel-node buildScripts/startMessage.js",
-    "start": "npm-run-all --parallel security-check share open:src lint:watch",
+    "start": "npm-run-all --parallel security-check share open:src lint:watch test:watch",
     "open:src": "babel-node buildScripts/srcServer.js",
     "test": "mocha --reporter progress buildScripts/testSetup.js \"src/**/*.test.js\"",
+    "test:watch": "npm run test -- --watch",
     "lint": "esw webpack.config.* src buildScripts",
     "lint:watch": "npm run lint -- --watch",
     "security-check": "nsp check",
