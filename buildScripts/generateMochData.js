@@ -14,7 +14,7 @@ jsf(schema).then(function (result) {
     if (err) {
       return console.log(chalk.red(err));
     } else {
-      console.log(chalk.green("Moch data generated."));
+      console.log(chalk.green("Mock data generated."));
     }
   });
 });
